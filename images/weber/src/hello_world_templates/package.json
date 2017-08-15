@@ -1,0 +1,13 @@
+{
+  "name": "intro_to_npm",
+  "version": "0.0.0",
+  "description": "hello world template",
+  "main": "app.js",
+  "dependencies": {
+    "consolidate": "~0.13.1",
+    "express": "~4.13.3",
+    "nunjucks": "^3.0.1"
+  },
+  "author": "Shaun Verch",
+  "license": "BSD"
+}

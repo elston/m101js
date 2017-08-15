@@ -44,12 +44,27 @@ mongo admin --host storage -u adminmaster -p passmaster
 ```
 
 
+Getting started with weber from a shell
+--------------------------------------------------------------------
+
+```
+make shell_weber
+```
+
+then write:
+
+```
+node app.js
+```
+
+
 Connect to mongo contaner
 --------------------------------------------------------------------
 
 ```
 docker exec -it m101js_storage_1 /bin/sh
 ```
+
 
 Mongo restore dump
 --------------------------------------------------------------------
@@ -58,6 +73,11 @@ Mongo restore dump
 mongorestore --host storage -u adminmaster -p passmaster dump
 ```
 
+
+HW1-1
+--------------------------------------------------------------------
+
+answer Hello from MongoDB!
 
 HW1-2
 --------------------------------------------------------------------
