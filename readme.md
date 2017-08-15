@@ -77,16 +77,15 @@ mongorestore --host storage -u adminmaster -p passmaster dump
 HW1-1
 --------------------------------------------------------------------
 
-answer Hello from MongoDB!
+answer: Hello from MongoDB!
 
 HW1-2
 --------------------------------------------------------------------
 
-answer 1815
+answer: I like kittens
 
 HW1-3
 --------------------------------------------------------------------
 
-question http://localhost:8080/hw1/50
+Answer: Hello, Agent 007.
 
-answer 53
