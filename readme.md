@@ -43,6 +43,17 @@ then write:
 mongo admin --host storage -u adminmaster -p passmaster
 ```
 
+or
+
+```
+mongo storage:27017/admin -u adminmaster -p passmaster
+```
+
+or
+
+```
+mongo storage:27017/m101 -u usermaster -p passmaster
+```
 
 Getting started with weber from a shell
 --------------------------------------------------------------------
@@ -81,6 +92,25 @@ answer: Hello from MongoDB!
 
 HW1-2
 --------------------------------------------------------------------
+
+after load dump you must create user to db m101
+
+```
+make shell_mongoshell
+mongo storage:27017/admin -u adminmaster -p passmaster
+```
+
+then
+
+```
+use m101;
+db.createUser({
+    user: "usermaster",
+    pwd: "passmaster",
+    roles: ["dbAdmin"]
+});
+```
+
 
 answer: I like kittens
 

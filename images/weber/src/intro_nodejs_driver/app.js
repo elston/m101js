@@ -2,7 +2,9 @@ var MongoClient = require('mongodb').MongoClient,
     assert = require('assert');
 
 // var url = 'mongodb://localhost:27017/video';
-var uri = "mongodb://adminmaster:passmaster@storage/admin?authMechanism=SCRAM-SHA-1";
+// var uri = "mongodb://adminmaster:passmaster@storage/admin?authMechanism=SCRAM-SHA-1";
+// var uri = "mongodb://adminmaster:passmaster@storage/admin";
+var uri = "mongodb://usermaster:passmaster@storage/video";
 
 MongoClient.connect(uri, function(err, db) {
 

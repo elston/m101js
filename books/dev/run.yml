@@ -27,7 +27,7 @@ services:
     networks:
       - netmain
     command:
-      - --auth
+      # - --auth
       - --bind_ip_all
       - -f
       - /etc/mongod.conf
