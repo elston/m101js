@@ -119,3 +119,56 @@ HW1-3
 
 Answer: Hello, Agent 007.
 
+
+
+HW2-1
+--------------------------------------------------------------------
+
+```
+db.movieDetails.find({"year":2013,"rated":"PG-13","awards.wins":0},{"title":1,_id:0});
+```
+
+Answer: A Decade of Decadence, Pt. 2: Legacy of Dreams
+
+
+HW2-2
+--------------------------------------------------------------------
+
+good 
+
+```
+db.movieDetails.find({}, {title: 1, _id: 0})
+db.movieDetails.find({year: 1964}, {title: 1, _id: 0})
+```
+bad
+
+```
+db.movieDetails.find({}, {title: 1})
+db.movieDetails.find({title: ""}, {title: 1})
+db.movieDetails.find({}, {title})
+db.movieDetails.find({title: "Muppets from Space"}, {title: 1})
+```
+
+
+HW2-3
+--------------------------------------------------------------------
+
+```
+db.movieDetails.find({"countries.1":"Sweden"}).count();
+```
+Answer: 6
+
+
+HW2-4
+--------------------------------------------------------------------
+
+```
+db.movieDetails.find({"genres":["Comedy","Crime"]}).count();
+```
+
+Answer: 20
+
+HW2-5
+--------------------------------------------------------------------
+
+Answer: $set
