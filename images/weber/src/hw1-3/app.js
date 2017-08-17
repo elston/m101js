@@ -5,8 +5,11 @@ var express = require('express'),
     engines = require('consolidate'),
     MongoClient = require('mongodb').MongoClient;
     assert = require('assert');
+    user = process.env.DB_USER;
+    pass = process.env.DB_PASSWORD;
+    dbName = process.env.DB_NAME;
 // ..
-var uri = 'mongodb://usermaster:passmaster@storage:27017/m101';
+var uri = 'mongodb://'+user+':'+pass+'@storage:27017/'+dbName;
 
 app.engine('html', engines.nunjucks);
 app.set('view engine', 'html');
