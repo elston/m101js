@@ -4,6 +4,7 @@ export DB_USER = usermaster
 export DB_PASSWORD = passmaster
 export DB_ADMIN_USER = adminmaster
 export DB_ADMIN_PASSWORD = passmaster
+export DB_NAME = m101
 
 # target:
 # target: all - Default target. Does nothing
@@ -58,7 +59,7 @@ build_storage:
 # target: build_weber - build weber image
 .PHONY: build_weber
 build_weber:
-	@echo "---> build weber"	
+	@echo "---> build weber"
 	@docker-compose \
 		-p $(PROJECT) \
 		-f build.yml \
@@ -69,7 +70,7 @@ build_weber:
 .PHONY: build_all
 build_all:
 	@make build_storage
-	@make build_weber	
+	@make build_weber
 
 
 # target:
@@ -78,7 +79,7 @@ build_all:
 # target: bootstrap_storage - bootstrap storage contaner
 .PHONY: bootstrap_storage
 bootstrap_storage:
-	@echo "---> bootstrap storage"	
+	@echo "---> bootstrap storage"
 	@docker-compose \
 		-p $(PROJECT) \
 		-f bootstrap.yml \
@@ -90,7 +91,7 @@ bootstrap_storage:
 # target: bootstrap_weber - bootstrap weber contaner
 .PHONY: bootstrap_weber
 bootstrap_weber:
-	@echo "---> bootstrap weber"	
+	@echo "---> bootstrap weber"
 	@docker-compose \
 		-p $(PROJECT) \
 		-f bootstrap.yml \
@@ -142,7 +143,7 @@ down:
 	@docker-compose \
 		-p $(PROJECT) \
 		-f run.yml \
-		down	
+		down
 
 
 # target: ps - watch all process all contaner in project
@@ -182,7 +183,3 @@ rmi:
 rmvol:
 	@docker volume rm `docker volume ls |grep $(PROJECT) |xargs -L1 | awk "{print $2}"`
 # ...
-
-
-
-
