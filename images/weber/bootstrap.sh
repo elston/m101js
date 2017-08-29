@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd /$PROJECT
-npm install npm
+# npm install npm
 
 
 

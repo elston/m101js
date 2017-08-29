@@ -1,5 +1,6 @@
 export PROJECT = m101js
 # ....
+export DB_NAME = m101
 export DB_USER = usermaster
 export DB_PASSWORD = passmaster
 export DB_ADMIN_USER = adminmaster

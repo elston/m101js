@@ -17,8 +17,4 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
     && echo $TZ > /etc/timezone \
     && dpkg-reconfigure -f noninteractive tzdata
 
-#..
-RUN touch ~/.bashrc \
-&& echo " " >> ~/.bashrc \
-&& echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
 
