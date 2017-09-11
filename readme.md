@@ -217,11 +217,13 @@ HW4-1
 
 Answer:
 
+```
 - -     The number of milestones for a company rarely exceeds 10 per year.
 - + Milestones will never contain more than 15 fields
 - + An individual milestone entry will always be smaller than 16K bytes
 - -     One frequently displayed view of our data displays company details such as the "name", "founded_year", "twitter_username", etc. as well as milestones.
 - -     Some of the milestone fields such as "stoneable_type" and "stoneable" are frequently the same from one milestone to another.
+```
 
 HW4-2
 --------------------------------------------------------------------
@@ -247,26 +249,25 @@ HW5-1
 
 Answer:
 
+```
 - -     db.products.find( { 'brand' : "GE" } )
-
 - + db.products.find( { 'brand' : "GE" } ).sort( { price : 1 } )
-
 - + db.products.find( { $and : [ { price : { $gt : 30 } }, { price : { $lt : 50 } } ] } ).sort( { brand : 1 } )
-
 - -     db.products.find( { brand : 'GE' } ).sort( { category : 1, brand : -1 } )
-
+```
 
 HW5-2
 --------------------------------------------------------------------
 
 Answer:
 
+```
 - + The query uses an index to determine the order in which to return result documents.
 - -     The query uses an index to determine which documents match.
 - -     The query returns 251120 documents.
 - + The query examines 251120 documents.
 - -     The query is a covered query.
-
+```
 
 HW5-3
 --------------------------------------------------------------------
